@@ -1,0 +1,406 @@
+{% extends "base.html"%}
+{% block title %}Menu{% endblock %}
+
+
+{% block content %}
+<head>
+
+    <style>
+        .banner-container {
+            height: 500px; /* Adjust the height as needed */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Hide any overflow if the image is larger */
+            position: relative; /* Required for absolute positioning of content */
+        }
+
+        .banner-image {
+            width: 100%; /* Ensure the image fills the container */
+            height: auto; /* Maintain the image's aspect ratio */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+
+<style>
+    .banner-container {
+        height: 500px; /* Adjust the height as needed */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .banner-image {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .dropdown-menu {
+        border: none;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        transition: transform 0.2s;
+        transform-origin: top right;
+        padding: 0;
+        width: auto;
+        background-color: #ffffff;
+    }
+
+    .banner-image:hover + .dropdown-menu,
+    .dropdown-menu:hover {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .dropdown-item {
+        color: #333;
+        font-weight: bold;
+        border: none;
+        background-color: transparent;
+        padding: 8px 20px;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+    }
+
+    .dropdown-item:hover {
+        background-color: #f8f9fa;
+    }
+</style>
+</head>
+<body >
+   
+
+
+  
+      <div class="card bg-dark text-white">
+        <img src="static\Imagesy\PIzza_plaza.png" class="card-img" alt="...">
+        <div class="card-img-overlay" >
+          <h3 class="card-title">Try our Lates Deals</h3>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          
+        </div>
+      </div>
+      
+
+
+   
+
+        <br>
+
+        <!-- NExt SEXTION AHEAD     -->
+
+        <div class="card-group bg-dark">
+            <div class="card bg-dark text-white">
+                <img class="card-img-top" src="static\Imagesy\vegi.png" alt="Card image top">
+                <div class="card-body">
+                    <h5 class="card-title">Veggie Pizza</h5>
+                    <p class="card-text">Angie's Veggie Delight: Experience a burst of garden-fresh goodness on our hand-tossed crust. Packed with a colorful medley of fresh vegetables, our Veggie Pizza is a mouthwatering masterpiece. Satisfy your cravings for wholesome flavor at Angie's!</p>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropup
+                        </button>
+                        <div class="dropdown-menu">
+                            <form method="POST" action="/Menu">
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Small Veggie Pizza", "type": "Veggie", "Cash": 5, "price_id":"price_1NnrM6JT2HBC5ySEYds2eOb8"}'>Small</button> 
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Medium Veggie Pizza", "type": "Veggie","Cash": 10, "price_id":"price_1NnrMbJT2HBC5ySE5d76ZcXE"}'>Medium</button>
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Large Veggie Pizza", "type": "Veggie","Cash": 12, "price_id":"price_1NnXiKJT2HBC5ySE9H6HiyjA"}'>Large</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong" style="color: black;">
+                        Warning
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalLabel" style="color: black;">Modal title</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body " style="color: black; ">
+                            <h4> May Contain Vegitables!</h4>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        
+            <div class="card bg-dark text-white">
+                <img class="card-img-top" src="static\Imagesy\BBQ.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">BBQ Chicken Pizza</h5>
+                    <p class="card-text">Angie's BBQ Chicken Sensation: Dive into a world of smoky, savory delight with our BBQ Chicken Pizza. Tender chunks of grilled chicken, slathered in tangy barbecue sauce, unite with melted mozzarella on our hand-tossed crust. It's a flavor explosion that'll have your taste buds dancing!</p>
+                </div>
+        
+                <!--  Drop down button -->
+                <div class="card-footer">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropup
+                        </button>
+                        <div class="dropdown-menu">
+                            <form method="POST" action="/Menu">   
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Small BBQ Pizza", "type": "BBQ", "Cash": 5, "price_id":"price_1NnrbQJT2HBC5ySE6DJzgmuf"}'>Small</button> 
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Medium BBQ Pizza", "type": "BBQ","Cash": 10, "price_id":"price_1NnrbkJT2HBC5ySE5NrLvxeA"}'>Medium</button>
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Large BBQ Pizza", "type": "BBQ","Cash": 12, "price_id":"price_1NnrbxJT2HBC5ySE5L8XCLDy"}'>Large</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+                <!--  Drop down button -->
+            </div>
+        
+            <div class="card bg-dark text-white">
+                <img class="card-img-top" src="static\Imagesy\BUffalo_Pizza.png" alt="Card image cap" style="max-width: 615px; max-height: 385px;" >
+                <div class="card-body">
+                    <h5 class="card-title">Buffalo Pizza</h5>
+                    <p class="card-text">Angie's Buffalo Bliss: Spice up your pizza experience with our Buffalo Pizza. Tangy buffalo sauce, succulent chunks of chicken, and a blend of melted cheeses come together on our hand-tossed crust. It's the perfect balance of heat and flavor, waiting to ignite your taste buds!</p>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropup
+                        </button>
+                        <div class="dropdown-menu">
+                            <form method="POST" action="/Menu">   
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Small Buffalo Pizza", "type": "Buffalo", "Cash": 5, "price_id":"price_1NnuMhJT2HBC5ySEHSMSLMFC"}'>Small </button> 
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Medium Buffalo Pizza", "type": "Buffalo", "Cash": 10, "price_id":"price_1NnuMrJT2HBC5ySEwxNLONZ2"}'>Medium</button>
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Large Buffalo Pizza", "type": "Buffalo", "Cash": 12, "price_id":"price_1NnuNAJT2HBC5ySE1bBsl7tj"}'>Large</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    
+
+      <br>
+
+
+    
+      
+
+
+
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 text-white">
+
+        <div class="col">
+          <div class="card h-100 bg-dark">
+            <img src="static\Imagesy\pepporonie.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pepperoni</h5>
+              <p class="card-text">Angie's Pepperoni Pizza: Savor the classic combination of zesty tomato sauce, melted mozzarella, and premium pepperoni on a crispy hand-tossed crust. It's pizza perfection at its finest.</p>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropup
+                    </button>
+                    <div class="dropdown-menu">
+                        <form method="POST" action="/Menu">
+                            <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Small Pepperoni Pizza", "type": "Pepperoni", "Cash": 5, "price_id":"price_1NnuPbJT2HBC5ySErn1B593C"}'>Small Pepperoni</button> 
+                            <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Medium Pepperoni Pizza", "type": "Pepperoni","Cash": 10, "price_id":"price_1NnuPmJT2HBC5ySEhHJFjg9k"}'>Medium</button>
+                            <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Large Pepperoni Pizza", "type": "Pepperoni","Cash": 12, "price_id":"price_1NnuPwJT2HBC5ySEaKFJpCes"}'>Large</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <div class="card h-100 bg-dark">
+            <img src="static\Imagesy\Choose_Pizza.png" class="card-img-top" alt="Not working">
+            <div class="card-body">
+              <h5 class="card-title">Have It Your Way!</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropup
+                    </button>
+                    <div class="dropdown-menu">
+                        <form method="POST" action="/Menu">   
+                            <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Small Choose Pizza", "type": "Choose", "Cash": 5, "price_id":"price_1NnuPbJT2HBC5ySErn1B593C"}'>Small </button> 
+                            <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Medium Choose Pizza", "type": "Choose","Cash": 10, "price_id":"price_1NnuPbJT2HBC5ySErn1B593C"}'>Medium</button>
+                            <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Large Choose Pizza", "type": "Choose","Cash": 12, "price_id":"price_1NnuPbJT2HBC5ySErn1B593C"}'>Large</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 bg-dark">
+            <img src="static\Imagesy\Cheese_pizza.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cheese</h5>
+              <p class="card-text">Angie's Cheese Pizza: Pure pizza simplicity at its best. Our hand-tossed crust is generously smothered with rich tomato sauce and a luscious blanket of melted mozzarella cheese. A timeless classic for pizza lovers.</p>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropup
+                    </button>
+                    <div class="dropdown-menu">
+                        <form method="POST" action="/Menu">   
+                            <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Small Cheese Pizza", "type": "Cheese", "Cash": 5, "price_id":"price_1NnuRkJT2HBC5ySEPiR6hWab"}'>Small</button> 
+                            <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Medium Cheese Pizza", "type": "Cheese", "Cash": 10, "price_id":"price_1NnuRwJT2HBC5ySEt5JUCGWf"}'>Medium</button>
+                            <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Large Cheese Pizza", "type": "Cheese", "Cash": 12, "price_id":"price_1NnuS6JT2HBC5ySEKP6rcsS4"}'>Large</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 text-white">
+
+        <div class="col">
+          <div class="card h-100 bg-dark">
+            <img src="static\Imagesy\vegi.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Veggie Pizza</h5>
+              <p class="card-text">Angie's Veggie Delight: Experience a burst of garden-fresh goodness on our hand-tossed crust. Packed with a colorful medley of fresh vegetables, our Veggie Pizza is a mouthwatering masterpiece. Satisfy your cravings for wholesome flavor at Angie's!</p>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropup
+                    </button>
+                    <div class="dropdown-menu">
+                        <form method="POST" action="/Menu">
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Small Veggie Pizza", "type": "Veggie", "Cash": 5, "price_id":"price_1NnrM6JT2HBC5ySEYds2eOb8"}'>Small</button> 
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Medium Veggie Pizza", "type": "Veggie","Cash": 10, "price_id":"price_1NnrMbJT2HBC5ySE5d76ZcXE"}'>Medium</button>
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Large Veggie Pizza", "type": "Veggie","Cash": 12, "price_id":"price_1NnXiKJT2HBC5ySE9H6HiyjA"}'>Large</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong" style="color: black;">
+                    Warning
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel" style="color: black;">Modal title</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body " style="color: black; ">
+                        <h4> May Contain Vegitables!</h4>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <div class="card h-100 bg-dark">
+            <img src="static\Imagesy\BBQ.png" class="card-img-top" alt="Not working">
+            <div class="card-body">
+              <h5 class="card-title">BBQ Chicken Pizza</h5>
+              <p class="card-text">Angie's BBQ Chicken Sensation: Dive into a world of smoky, savory delight with our BBQ Chicken Pizza. Tender chunks of grilled chicken, slathered in tangy barbecue sauce, unite with melted mozzarella on our hand-tossed crust. It's a flavor explosion that'll have your taste buds dancing!</p>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropup
+                    </button>
+                    <div class="dropdown-menu">
+                        <form method="POST" action="/Menu">   
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Small BBQ Pizza", "type": "BBQ", "Cash": 5, "price_id":"price_1NnrbQJT2HBC5ySE6DJzgmuf"}'>Small</button> 
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Medium BBQ Pizza", "type": "BBQ","Cash": 10, "price_id":"price_1NnrbkJT2HBC5ySE5NrLvxeA"}'>Medium</button>
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Large BBQ Pizza", "type": "BBQ","Cash": 12, "price_id":"price_1NnrbxJT2HBC5ySE5L8XCLDy"}'>Large</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 bg-dark">
+            <img src="static\Imagesy\BUffalo_Pizza.png" class="card-img-top" alt="Pizza dummy" style="max-width: 615px; max-height: 400px;">
+            <div class="card-body">
+              <h5 class="card-title">Buffalo Pizza</h5>
+              <p class="card-text">Angie's Buffalo Bliss: Spice up your pizza experience with our Buffalo Pizza. Tangy buffalo sauce, succulent chunks of chicken, and a blend of melted cheeses come together on our hand-tossed crust. It's the perfect balance of heat and flavor, waiting to ignite your taste buds!</p>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropup
+                    </button>
+                    <div class="dropdown-menu">
+                        <form method="POST" action="/Menu">   
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Small Buffalo Pizza", "type": "Buffalo", "Cash": 5, "price_id":"price_1NnuMhJT2HBC5ySEHSMSLMFC"}'>Small </button> 
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Medium Buffalo Pizza", "type": "Buffalo", "Cash": 10, "price_id":"price_1NnuMrJT2HBC5ySEwxNLONZ2"}'>Medium</button>
+                                <button class="dropdown-item" type="submit" name="Pizza_Info" value='{"size": "Large Buffalo Pizza", "type": "Buffalo", "Cash": 12, "price_id":"price_1NnuNAJT2HBC5ySE1bBsl7tj"}'>Large</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+</body>
+{% endblock %}
