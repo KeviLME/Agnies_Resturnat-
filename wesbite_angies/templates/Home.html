@@ -1,0 +1,177 @@
+{% extends "base.html"%}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+
+<link rel="stylesheet" href="mystyle.css">
+  <style>
+    /* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+@media (min-width: 576px)
+ {}.container, .container-sm {
+    max-width: 1600px;
+}
+
+
+  </style>
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>  
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+
+
+    
+
+
+<main>
+
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="static\Imagesy\PIzza_plaza.png" width="100%" height="100%"  alt="Pizza">
+        
+          <div class="carousel-caption text-start" style="color:white;">
+            <h1>Hungry?</h1>
+            <h5 class="font-weight-bold" >Don't worry; we've got you covered with our signature pizza. Just order now!</h5> 
+            <br>
+            <p><a class="btn btn-lg btn-primary" href="{{ url_for('views.Menu')}}">Order now</a></p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+  
+
+  
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <br>
+
+    <div class="container marketing" >
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        
+        <div class="col-lg-4">
+          <img src="static\Imagesy\pepporonie.png" width="180" height="180" class="rounded-circle" alt="Circle Image">
+          <h2 class="fw-normal">Classic Pepperoni</h2>
+          <p>If it ain't broke, don't fix it. Here, we have mastered the classic pepperoni pizza with perfect toppings and cheese. It's surely a bite to never forget.</p>
+          <p><a class="btn btn-secondary" href="{{ url_for('views.Menu')}}">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <img src="static\Imagesy\vegi.png" width="180" height="180" class="rounded-circle" alt="Circle Image">
+          <h2 class="fw-normal">Classic Cheese</h2>
+          <p>If it ain't broke, don't fix it. Here, we have perfected the classic cheese pizza with a blend of gooey, delicious cheese. It's a taste that's unforgettable.</p>
+          <p><a class="btn btn-secondary" href="{{ url_for('views.Menu')}}">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <img src="static\Imagesy\vegi.png" width="180" height="180" class="rounded-circle" alt="Circle Image">
+          <h2 class="fw-normal">Have It Your Way!</h2>
+          <p>Dont see anyhting you like why not creat the perfect dish just for you!</p>
+          <p><a class="btn btn-secondary" href="{{ url_for('views.Menu')}}">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">New BBQ Pizza <span class="text-body-secondary">It’ll blow your mind.</span></h2>
+          <p class="lead">Indulge in a mouthwatering BBQ Pizza experience like no other. Our signature pizza is a harmonious blend of smoky barbecue sauce, tender grilled chicken, crisp bacon, and a fusion of melted cheeses. Every bite delivers a symphony of flavors that will leave your taste buds craving for more. Savor the irresistible combination of savory and sweet, all atop a perfectly baked crust. Discover pizza perfection with our BBQ Pizza today!</p>
+        </div>
+        <div class="col-md-5">
+          <img src="static\Imagesy\BBQ.png"  width="500" height="500" class="rounded" >
+          
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
+          <p class="lead">Dive into the bold and spicy world of Buffalo Pizza! Our pizza masterpiece combines the fiery kick of buffalo sauce with tender pieces of succulent chicken, all generously smothered in a velvety layer of melted cheese. Each bite is an exhilarating adventure for your taste buds, offering the perfect balance of heat and flavor. Topped with a drizzle of cooling ranch dressing and nestled on a crispy, golden crust, our Buffalo Pizza is the ultimate fusion of zesty and cheesy goodness. Get ready to experience a pizza sensation that's truly unforgettable!</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="static\Imagesy\BUffalo_Pizza.png"  width="500" height="500" class="rounded" >
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Dont like Meat?<span class="text-body-secondary">-Checkmate.</span></h2>
+          <p class="lead">Indulge in a garden-fresh delight with our Veggie Pizza! Packed with nature's bounty, this pizza is a celebration of vibrant colors and flavors. Picture a crispy, golden crust generously spread with rich tomato sauce, then adorned with a rainbow of garden-fresh toppings. You'll savor the harmony of sweet bell peppers, savory mushrooms, zesty red onions, and hearty spinach, all perfectly mingling with gooey mozzarella cheese. Every bite is a journey through the garden, offering a wholesome and delicious experience that's perfect for veggie lovers and pizza enthusiasts alike. Taste the goodness of nature with every slice of our Veggie Pizza!</p>
+        </div>
+        <div class="col-md-5">
+          <img src="static\Imagesy\vegi.png"  width="500" height="500" class="rounded" >
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2023–2030 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+
+{% endblock %}
+
